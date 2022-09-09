@@ -21,7 +21,7 @@ function ConvertHandler() {
     //evaluate the remaining number (resolve fractions)
     result = eval(match)
     //eval is dangerous but we made sure there is nothing but numbers, dots and one slash
-    console.log(`input value is ${result}`);
+    //console.log(`input value is ${result}`);
     return result;
   };
   
@@ -35,7 +35,7 @@ function ConvertHandler() {
     match == 'L' ? result = match 
       : match == 'l' ? result = 'L'
       : result = match.toLowerCase()
-    console.log(`input unit is ${result}`);
+    //console.log(`input unit is ${result}`);
     return result;
   };
   
@@ -50,7 +50,7 @@ function ConvertHandler() {
     }
     let result = dictionary[initUnit]
     if(result === undefined) { result = 'invalid' } //set invalid flag if undefined
-    console.log(`opposite unit is ${result}`);
+    //console.log(`opposite unit is ${result}`);
     return result;
   };
 
@@ -64,7 +64,7 @@ function ConvertHandler() {
       'mi': 'miles'
     }
     let result = dictionary[unit];
-    console.log(`long spelling for ${unit} is ${result}`);
+    //console.log(`long spelling for ${unit} is ${result}`);
     return result;
   };
   
@@ -81,7 +81,7 @@ function ConvertHandler() {
       : initUnit == 'kg' ? result = initNum / lbsToKg
       : initUnit == 'km' ? result = initNum / miToKm
       : result = 'invalid' // set invalid flag if not valid
-    console.log(result);
+    //console.log(result);
     // get number of decimal places (append a . to avoid errors, split on . and check length of index 1)
     let decPlaces = (result + '.').split('.')[1].length //even if num has no decimal places will not error (returns 0)
     // if too many decimal places round down to 5 by creating round integer 100.000 times too high then dividing.
@@ -95,7 +95,7 @@ function ConvertHandler() {
     let spellInitUnit = this.spellOutUnit(initUnit);
     let spellReturnUnit = this.spellOutUnit(returnUnit);
     let result = `${initNum} ${spellInitUnit} converts to ${returnNum} ${spellReturnUnit}`;
-    console.log(result);
+    //console.log(result);
     return result;
   };
   
