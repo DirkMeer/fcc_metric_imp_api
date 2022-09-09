@@ -14,13 +14,13 @@ function ConvertHandler() {
     } //now we will test for double slashes (invalid number)
     let slashRegex = new RegExp(/\//g)
     let slashes = match.match(slashRegex) //return an array of matches
-    if (slashes !== null) { //make sure we're not reading length of a null object (no slashes case)
-      if (slashes.length > 1) { //if more than one slash
+    if (slashes !== null && slashes.length > 1) { //make sure we're not reading length of a null object (no slashes case) this does not cause a crash because if the first statement evaluates to false the second one is not looked at so we can safely check the slashes length even if slashes might be null and not have a length.
         result = 'invalid' //return invalid
+        return result; //stop here if invalid number
       }
-    } else { //else evaluate the remaining number (resolve fractions)
-      result = eval(match)
-    } //eval is dangerous but we made sure there is nothing but numbers, dots and one slash
+    //evaluate the remaining number (resolve fractions)
+    result = eval(match)
+    //eval is dangerous but we made sure there is nothing but numbers, dots and one slash
     console.log(`input value is ${result}`);
     return result;
   };
