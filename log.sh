@@ -1,3 +1,14 @@
+  text: '{"initNum":4,"initUnit":"gal","returnNum":15.14164,"returnUnit":"L","string":"4 gallons converts to 15.14164 liters"}',
+  body: {
+    initNum: 4,
+    initUnit: 'gal',
+    returnNum: 15.14164,
+    returnUnit: 'L',
+    string: '4 gallons converts to 15.14164 liters'
+  },
+
+
+
  npm start
 
 > fcc-imperial-metric-converter-boilerplate@1.0.0 start
@@ -135,27 +146,27 @@ long spelling for mi is miles
 1min
 input value is 1
 input unit is min
-opposite unit is undefined
-Error, invalid unit
+opposite unit is invalid
+invalid
 long spelling for min is undefined
-long spelling for undefined is undefined
-1 undefined converts to Error, invalid unit undefined
+long spelling for invalid is undefined
+1 undefined converts to invalid undefined
 1//2gal
-input value is 1
+input value is invalid
 input unit is gal
 opposite unit is L
-3.78541
+NaN
 long spelling for gal is gallons
 long spelling for L is liters
-1 gallons converts to 3.78541 liters
+invalid gallons converts to NaN liters
 1//2min
-input value is 1
+input value is invalid
 input unit is min
-opposite unit is undefined
-Error, invalid unit
+opposite unit is invalid
+invalid
 long spelling for min is undefined
-long spelling for undefined is undefined
-1 undefined converts to Error, invalid unit undefined
+long spelling for invalid is undefined
+invalid undefined converts to invalid undefined
 mi
 input value is 1
 input unit is mi
@@ -165,29 +176,13 @@ long spelling for mi is miles
 long spelling for km is kilometers
 1 miles converts to 1.60934 kilometers
 1/5mi
-input value is 0.2
+input value is undefined
 input unit is mi
 opposite unit is km
-0.32186800000000004
+# NaN
 long spelling for mi is miles
 long spelling for km is kilometers
-0.2 miles converts to 0.32187 kilometers
-1.5/7km
-input value is 0.21428571428571427
-input unit is km
-opposite unit is mi
-0.13315130071067288
-long spelling for km is kilometers
-long spelling for mi is miles
-0.21428571428571427 kilometers converts to 0.13315 miles
-3/2.7km
-input value is 1.111111111111111
-input unit is km
-opposite unit is mi
-0.6904141518331185
-long spelling for km is kilometers
-long spelling for mi is miles
-1.111111111111111 kilometers converts to 0.69041 miles
+undefined miles converts to NaN kilometers
 2mi
 input value is 2
 input unit is mi
